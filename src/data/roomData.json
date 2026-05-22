@@ -1,0 +1,32 @@
+{
+  "roomId": 3,
+  "name": "Crumbling Alcove",
+  "isDark": true,
+  "description": "The eastward tunnel takes a bend to the north, where it becomes a set of slick stone stairs. The trickle of water stems from between the crumbled remains of what was once a burial alcove; there is a rusted metal door leading to the room on the eastern side of the passageway.",
+  "features": [
+    {
+      "id": "feat-1",
+      "type": "encounter",
+      "subtype": "combat",
+      "name": "River of Filth",
+      "hidden": 0,
+      "details": "The mummified corpse of an ancient warrior stirs to life from amidst loose rubble. It is always hostile, and is clad in scraps of what was once a magnificent silk tunic and breeches, with mail coif and iron helm."
+    },
+    {
+      "id": "feat-2",
+      "type": "trap",
+      "subtype": "detail",
+      "name": "Broken Stairs",
+      "hidden": 3,
+      "details": "The stairs leading on are slick with moisture and partially crumbled, making them difficult to navigate."
+    },
+    {
+      "id": "feat-3",
+      "type": "feature",
+      "subtype": "feature",
+      "name": "Sarcophagus",
+      "hidden": 0,
+      "details": "A weathered granite sarcophagus is partially buried below a pile of rubble."
+    }
+  ]
+}
