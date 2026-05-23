@@ -21,7 +21,7 @@ export function generateRandomRoom(roomId: number): RoomData {
   // ------------------------------------
   
   const poolSize = roomFeaturesPool.length;
-  const countToSelect = Math.min(5, poolSize); // Max 5 features, but not more than the pool size
+  const countToSelect = Math.floor(Math.random() * Math.min(4, poolSize - 1)) + 2; // Random 2-5 features, but not more than the pool size
 
   // Create a copy of indices to pick from
   const availableIndices = Array.from({ length: poolSize }, (_, i) => i);
