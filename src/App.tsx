@@ -1,13 +1,16 @@
 import './App.css'
 
 import { RoomCard } from './components/RoomCard';
-import { roomData } from './data/roomData';
-import './App.css';
+import { generateRandomRoom } from './utils/roomGenerator';
+
+import { useState} from 'react';
 
 function App() {
+  const [room, setRoom] = useState(() => generateRandomRoom(1));
+
   return (
     <div className="app-container">
-      <RoomCard room={roomData} />
+      <RoomCard room={room} />
     </div>
   );
 }
