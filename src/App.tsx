@@ -3,14 +3,20 @@ import './App.css'
 import { RoomCard } from './components/RoomCard';
 import { generateRandomRoom } from './utils/roomGenerator';
 
-import { useState} from 'react';
+import { useRef, useState} from 'react';
 
 function App() {
   const [room, setRoom] = useState(() => generateRandomRoom(1));
 
+  const nextIdRef = useRef<number>(2);
+
   // Button to regenerate without reloading
   const regenerate = () => {
-    setRoom(generateRandomRoom(Math.floor(Math.random() * 39) + 2));
+    const newRoom = (generateRandomRoom(nextIdRef.current));
+
+    setRoom(newRoom);
+
+    nextIdRef.current += 1;
   };
 
   return (
