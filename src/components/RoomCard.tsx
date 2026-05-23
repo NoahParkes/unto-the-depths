@@ -22,8 +22,13 @@ export function RoomCard({ room }: RoomCardProps) {
   
   return (
     <div className="room-card">
-      <h2 className="room-title">{compositeTitle}</h2>
-      <p className="room-description">{room.description}</p>
+      <h2 className="room-title">
+        {compositeTitle}
+      </h2>
+      
+      <p className="room-description">
+        {room.description}
+      </p>
 
       <ul className="features-list">
         {room.features.map((feature, index) => (
