@@ -1,0 +1,56 @@
+[
+  {
+    "id": "feat-1",
+    "type": "feature",
+    "subtype": "feature",
+    "name": "Sarcophagus",
+    "hidden": 0,
+    "details": "A weathered granite sarcophagus is partially buried below rubble.",
+    "tags": ["undead", "container"]
+  },
+  {
+    "id": "feat-2",
+    "type": "feature",
+    "subtype": "feature",
+    "name": "Rusted Chest",
+    "hidden": 0,
+    "details": "A rusted iron chest sits in the corner.",
+    "tags": ["container", "treasure"]
+  },
+  {
+    "id": "feat-3",
+    "type": "encounter",
+    "subtype": "combat",
+    "name": "Mummified Warrior",
+    "hidden": 0,
+    "details": "The mummified corpse stirs to life from amidst loose rubble. It is always hostile.",
+    "tags": ["undead", "combat", "medium"]
+  },
+  {
+    "id": "feat-4",
+    "type": "encounter",
+    "subtype": "npc",
+    "name": "Lost Traveler",
+    "hidden": 0,
+    "details": "A terrified refugee cowers in the corner.",
+    "tags": ["human", "neutral", "easy"]
+  },
+  {
+    "id": "feat-5",
+    "type": "trap",
+    "subtype": "detail",
+    "name": "Broken Stairs",
+    "hidden": 3,
+    "details": "The stairs are slick with moisture and partially crumbled.",
+    "tags": ["environment", "no-disarm"]
+  },
+  {
+    "id": "feat-6",
+    "type": "trap",
+    "subtype": "room",
+    "name": "Pit of Filth",
+    "hidden": 2,
+    "details": "A hidden pit filled with rotting waste blocks the center of the room.",
+    "tags": ["trap", "dangerous"]
+  }
+]
