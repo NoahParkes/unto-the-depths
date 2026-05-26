@@ -75,6 +75,38 @@ The `generateRandomRoom` function constructs a Room object by:
     - Sorts by type first, then hidden if they are of the same type
 4. **Return RoomData:** Returns RoomData containing selected/generated attributes
 
+### Data Pools
+
+#### Room Names
+File `roomNames.json` stores room name generation data as two arrays `nouns` and `adjectives`
+
+`nouns` stores noun objects with attributes:
+- **noun** - a noun denoting the type or form of the room e.g. Antechamber
+- **size** - an array of logical room sizes denoted by the noun (small, medium and/or large)
+    - intended to later use in conjunction with a size attribute of the room object which will determine the size
+    - determined size will narrow possible room types (nouns available)
+- **tags** - an array of single word descriptors of the possible form or function of the room
+    - *access:* room provides access to something important or dungeon itself
+    - *adjoined:* room is connected to another primary room
+    - *animal:* room is associated with or likely contains an animal or animals
+    - *artificial:* man-made or formed by unnatural means
+    - *burial:* room is associated with the burial of the dead
+    - *dangerous:* room is harzardous to Trespassers by its form or function
+    - *dark:* room is likely dark unless purposefully lit
+    - *dwelling:* room serves as a living space for humans, animals or monsters
+    - *fall:* form of room or major room feature poses the risk of falling
+    - *hidden:* room is likely to be or can easily be hidden
+    - *monster:* room is associated with or likely contains an animal or animals
+    - *natural:* formed by natural means
+    - *passage:* room serves as a passageway between rooms
+    - *religious:* religious or spiritual connotations or function of room
+    - *secure:* room serves to protect something
+    - *storage:* room serves as a store, container or stockpile
+    - *treasure:* likely contains treasure or something important
+    - *underground:* room is underground
+    - *utility:* room serves or once served a logistical purpose in the dungeon
+
+
 ## Running the Project
 Requires **[Node.js](https://nodejs.org/en/download/)** (Version 18.x or higher) and **[npm](https://docs.npmjs.com/)**
 
