@@ -8,27 +8,27 @@
         {
             "noun": "Alcove",
             "size": ["small"],
-            "tags": ["adjoined", "hidden"]
+            "tags": ["adjoined", "artificial", "hidden"]
         },
         {
             "noun": "Altar",
             "size": ["small", "medium"],
-            "tags": ["holy", "religious", "utility"]
+            "tags": ["artificial", "religious", "utility"]
         },
         {
             "noun": "Antechamber",
             "size": ["medium", "large"],
-            "tags": ["access", "adjoined", "transition", "utility"]
+            "tags": ["access", "adjoined", "artificial", "transition", "utility"]
         },
         {
             "noun": "Basement",
             "size": ["small", "medium", "large"],
-            "tags": ["dark", "storage", "underground", "utility"]
+            "tags": ["artificial", "dark", "storage", "underground", "utility"]
         },
         {
             "noun": "Cellar",
             "size": ["small", "medium"],
-            "tags": ["dark", "storage", "underground", "utility"]
+            "tags": ["artificial", "dark", "storage", "underground", "utility"]
         },
         {
             "noun": "Chasm",
@@ -38,57 +38,57 @@
         {
             "noun": "Cloister",
             "size": ["small", "medium"],
-            "tags": ["dwelling", "religious", "secure", "utility"]
+            "tags": ["artificial", "dwelling", "religious", "secure", "utility"]
         },
         {
             "noun": "Crypt",
             "size": ["small", "medium", "large"],
-            "tags": ["burial", "dark", "death", "religious", "storage", "underground", "utility"]
+            "tags": ["artificial", "burial", "dark", "death", "religious", "storage", "underground", "utility"]
         },
         {
             "noun": "Den",
             "size": ["small", "medium"],
-            "tags": ["animal", "dangerous", "dwelling", "hidden", "monster"]
+            "tags": ["artificial", "animal", "dangerous", "dwelling", "hidden", "monster", "natural"]
         },
         {
             "noun": "Hollow",
             "size": ["small", "medium", "large"],
-            "tags": ["dwelling", "hidden", "monster", "natural"]
+            "tags": ["artificial", "dwelling", "hidden", "monster", "natural"]
         },
         {
             "noun": "Lair",
             "size": ["small", "medium", "large"],
-            "tags": ["dangerous", "dwelling", "hidden", "monster"]
+            "tags": ["artificial", "dangerous", "dwelling", "hidden", "monster"]
         },
         {
             "noun": "Passageway",
             "size": ["small", "medium"],
-            "tags": ["dark", "passage", "underground", "utility"]
+            "tags": ["artificial", "dark", "passage", "underground", "utility"]
         },
         {
             "noun": "Pit",
             "size": ["small", "medium", "large"],
-            "tags": ["dangerous", "fall", "monster"]
+            "tags": ["artificial", "dangerous", "fall", "monster"]
         },
         {
             "noun": "Sanctum",
             "size": ["small", "medium", "large"],
-            "tags": ["hidden", "religious", "secure"]
+            "tags": ["artificial", "hidden", "religious", "secure"]
         },
         {
             "noun": "Shrine",
             "size": ["small", "medium", "large"],
-            "tags": ["hidden", "religious", "utility"]
+            "tags": ["artificial", "hidden", "religious", "utility"]
         },
         {
             "noun": "Tunnel",
             "size": ["small", "medium"],
-            "tags": ["dark", "passage", "underground", "utility"]
+            "tags": ["artificial", "dark", "natural","passage", "underground", "utility"]
         },
         {
             "noun": "Vault",
             "size": ["small", "medium", "large"],
-            "tags": ["secure", "storage", "treasure", "underground", "utility"]
+            "tags": ["artificial", "secure", "storage", "treasure", "underground", "utility"]
         }
 
     ],
