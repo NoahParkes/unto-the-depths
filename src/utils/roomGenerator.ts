@@ -14,7 +14,7 @@ const generateRoomName = () => {
   const capitalise = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
   
   const adjective = capitalise(randomPick(roomNames.adjectives));
-  const noun = capitalise(randomPick(roomNames.nouns).name);
+  const noun = capitalise(randomPick(roomNames.nouns).noun);
 
   if (Math.random() > 0.9) {
     return noun; // 10% chance to just return the noun
