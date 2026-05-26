@@ -1,26 +1,96 @@
 {
     "nouns": [
-        "Alcove",
-        "Antechamber",
-        "Basement",
-        "Cellar",
-        "Crypt",
-        "Lair",
-        "Den",
-        "Vault",
-        "Catacomb",
-        "Tunnel",
-        "Sanctum",
-        "Abyss",
-        "Labyrinth",
-        "Maze",
-        "Pit",
-        "Hollow",
-        "Shrine",
-        "Altar",
-        "Passageway",
-        "Cloister",
-        "Chasm"
+        {
+            "name": "Abyss",
+            "size": ["medium", "large"],
+            "tags": ["dangerous", "dark", "fall", "monster"]
+        },
+        {
+            "name": "Alcove",
+            "size": ["small"],
+            "tags": ["adjoined", "hidden"]
+        },
+        {
+            "name": "Altar",
+            "size": ["small", "medium"],
+            "tags": ["holy", "religious", "utility"]
+        },
+        {
+            "name": "Antechamber",
+            "size": ["medium", "large"],
+            "tags": ["access", "adjoined", "transition", "utility"]
+        },
+        {
+            "name": "Basement",
+            "size": ["small", "medium", "large"],
+            "tags": ["dark", "storage", "underground", "utility"]
+        },
+        {
+            "name": "Cellar",
+            "size": ["small", "medium"],
+            "tags": ["dark", "storage", "underground", "utility"]
+        },
+        {
+            "name": "Chasm",
+            "size": ["medium", "large"],
+            "tags": ["dangerous", "dark", "fall", "natural"]
+        },
+        {
+            "name": "Cloister",
+            "size": ["small", "medium"],
+            "tags": ["dwelling", "religious", "secure", "utility"]
+        },
+        {
+            "name": "Crypt",
+            "size": ["small", "medium", "large"],
+            "tags": ["burial", "dark", "death", "religious", "storage", "underground", "utility"]
+        },
+        {
+            "name": "Den",
+            "size": ["small", "medium"],
+            "tags": ["animal", "dangerous", "dwelling", "hidden", "monster"]
+        },
+        {
+            "name": "Hollow",
+            "size": ["small", "medium", "large"],
+            "tags": ["dwelling", "hidden", "monster", "natural"]
+        },
+        {
+            "name": "Lair",
+            "size": ["small", "medium", "large"],
+            "tags": ["dangerous", "dwelling", "hidden", "monster"]
+        },
+        {
+            "name": "Passageway",
+            "size": ["small", "medium"],
+            "tags": ["dark", "passage", "underground", "utility"]
+        },
+        {
+            "name": "Pit",
+            "size": ["small", "medium", "large"],
+            "tags": ["dangerous", "fall", "monster"]
+        },
+        {
+            "name": "Sanctum",
+            "size": ["small", "medium", "large"],
+            "tags": ["hidden", "religious", "secure"]
+        },
+        {
+            "name": "Shrine",
+            "size": ["small", "medium", "large"],
+            "tags": ["hidden", "religious", "utility"]
+        },
+        {
+            "name": "Tunnel",
+            "size": ["small", "medium"],
+            "tags": ["dark", "passage", "underground", "utility"]
+        },
+        {
+            "name": "Vault",
+            "size": ["small", "medium", "large"],
+            "tags": ["secure", "storage", "treasure", "underground", "utility"]
+        }
+
     ],
     "adjectives": [
         "Crumbling",
