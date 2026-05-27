@@ -13,10 +13,10 @@ export function RoomCard({ room, onUpdate}: RoomCardProps) {
   
   if (room.isDark) tags.push('D');
   
-  const hasEncounter = room.features.some(f => f.type === 'encounter');
+  const hasEncounter = room.features.some(f => f.category === 'encounter');
   if (hasEncounter) tags.push('E');
   
-  const hasTrap = room.features.some(f => f.type === 'trap');
+  const hasTrap = room.features.some(f => f.category === 'trap');
   if (hasTrap) tags.push('T');
 
   // State for Editing
