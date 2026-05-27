@@ -13,7 +13,7 @@ const randomPick = <T>(arr: T[]): T => {
 const generateRoomName = () => {
   const capitalise = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
   
-  const adjective = capitalise(randomPick(roomNames.adjectives));
+  const adjective = capitalise(randomPick(roomNames.adjectives).adjective);
   const noun = capitalise(randomPick(roomNames.nouns).noun);
 
   if (Math.random() > 0.9) {

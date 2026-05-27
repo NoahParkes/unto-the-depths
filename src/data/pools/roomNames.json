@@ -93,28 +93,85 @@
 
     ],
     "adjectives": [
-        "Crumbling",
-        "Slimy",
-        "Damp",
-        "Moldy",
-        "Rusted",
-        "Fungal",
-        "Dripping",
-        "Echoing",
-        "Weeping",
-        "Obsidian",
-        "Moldering",
-        "Bone-strewn",
-        "Shadowed",
-        "Slick",
-        "Candlelit",
-        "Tangled",
-        "Hollow",
-        "Ashen",
-        "Broken",
-        "Cobwebbed",
-        "Flickering",
-        "Stagnant",
-        "Whispering"
+        {
+            "adjective": "Crumbling",
+            "tags": ["dangerous", "fall", "ruined"]
+        },
+        {
+            "adjective": "Slimy",
+            "tags": ["moisture", "monster", "natural"]
+        },
+        {
+            "adjective": "Damp",
+            "tags": ["moisture", "natural"]
+        },
+        {
+            "adjective": "Moldy",
+            "tags": ["moisture", "natural"]
+        },
+        {
+            "adjective": "Rusted",
+            "tags": ["artificial", "ruined"]
+        },
+        {
+            "adjective": "Fungal",
+            "tags": ["moisture", "natural"]
+        },
+        {
+            "adjective": "Dripping",
+            "tags": ["moisture", "natural"]
+        },
+        {
+            "adjective": "Echoing",
+            "tags": ["natural"]
+        },
+        {
+            "adjective": "Moldering",
+            "tags": ["artificial", "ruined"]
+        },
+        {
+            "adjective": "Bone-strewn",
+            "tags": ["dangerous", "death", "natural"]
+        },
+        {
+            "adjective": "Shadowy",
+            "tags": ["dark", "natural"]
+        },
+        {
+            "adjective": "Slick",
+            "tags": ["moisture", "natural"]
+        },
+        {
+            "adjective": "Candlelit",
+            "tags": ["artificial", "light"]
+        },
+        {
+            "adjective": "Tangled",
+            "tags": ["natural"]
+        },
+        {
+            "adjective": "Ashen",
+            "tags": ["ruined"]
+        },
+        {
+            "adjective": "Broken",
+            "tags": ["artificial", "ruined"]
+        },
+        {
+            "adjective": "Cobwebbed",
+            "tags": ["animal", "natural"]
+        },
+        {
+            "adjective": "Flickering",
+            "tags": ["artificial", "light"]
+        },
+        {
+            "adjective": "Stagnant",
+            "tags": ["moisture", "natural"]
+        },
+        {
+            "adjective": "Whispering",
+            "tags": ["natural"]
+        }
     ]
 }
