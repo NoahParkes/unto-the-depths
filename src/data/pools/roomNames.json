@@ -1,48 +1,177 @@
-[
-    "Crumbling Alcove",
-    "Slimy Crossroads",
-    "Damp Crypt",
-    "Moldy Antechamber",
-    "Rusted Gatehouse",
-    "Fungal Grotto",
-    "The Dripping Crypt",
-    "Rusted Iron Gate",
-    "Cavern of Whispers",
-    "The Rotting Hall",
-    "Stone Lantern Nook",
-    "The Sunken Cistern",
-    "Shattered Pillar Room",
-    "The Moldering Vault",
-    "Fungal Grotto",
-    "The Bone Pile",
-    "Echoing Chamber",
-    "The Weeping Wall",
-    "Obsidian Alcove",
-    "The Moldy Storehouse",
-    "Crumbled Archway",
-    "The Shadowed Cell",
-    "Slick Stone Steps",
-    "The Rusty Forge",
-    "Candlelit Niche",
-    "The Tangled Root",
-    "The Hollow Log",
-    "Ashen Firepit",
-    "The Broken Bridge",
-    "The Moldy Bookshelf",
-    "The Cavernous Drop",
-    "The Stone Coffin",
-    "The Damp Corridor",
-    "The Cobweb Corner",
-    "The Iron Chest",
-    "The Broken Statue",
-    "The Flickering Torch",
-    "The Stagnant Pool",
-    "The Throat of the Mountain",
-    "The Whispering Pit",
-    "The Rusty Chains",
-    "The Moldy Tapestry",
-    "The Cracked Floor",
-    "The Silent Corridor",
-    "The Bone Altar",
-    "The Shadowed Stair"
-]
+{
+    "nouns": [
+        {
+            "noun": "Abyss",
+            "size": ["medium", "large"],
+            "tags": ["dangerous", "dark", "fall", "monster"]
+        },
+        {
+            "noun": "Alcove",
+            "size": ["small"],
+            "tags": ["adjoined", "artificial", "hidden"]
+        },
+        {
+            "noun": "Altar",
+            "size": ["small", "medium"],
+            "tags": ["artificial", "religious", "utility"]
+        },
+        {
+            "noun": "Antechamber",
+            "size": ["medium", "large"],
+            "tags": ["access", "adjoined", "artificial", "transition", "utility"]
+        },
+        {
+            "noun": "Basement",
+            "size": ["small", "medium", "large"],
+            "tags": ["artificial", "dark", "storage", "underground", "utility"]
+        },
+        {
+            "noun": "Cellar",
+            "size": ["small", "medium"],
+            "tags": ["artificial", "dark", "storage", "underground", "utility"]
+        },
+        {
+            "noun": "Chasm",
+            "size": ["medium", "large"],
+            "tags": ["dangerous", "dark", "fall", "natural"]
+        },
+        {
+            "noun": "Cloister",
+            "size": ["small", "medium"],
+            "tags": ["artificial", "dwelling", "religious", "secure", "utility"]
+        },
+        {
+            "noun": "Crypt",
+            "size": ["small", "medium", "large"],
+            "tags": ["artificial", "burial", "dark", "death", "religious", "storage", "underground", "utility"]
+        },
+        {
+            "noun": "Den",
+            "size": ["small", "medium"],
+            "tags": ["artificial", "animal", "dangerous", "dwelling", "hidden", "monster", "natural"]
+        },
+        {
+            "noun": "Hollow",
+            "size": ["small", "medium", "large"],
+            "tags": ["artificial", "dwelling", "hidden", "monster", "natural"]
+        },
+        {
+            "noun": "Lair",
+            "size": ["small", "medium", "large"],
+            "tags": ["artificial", "dangerous", "dwelling", "hidden", "monster"]
+        },
+        {
+            "noun": "Passageway",
+            "size": ["small", "medium"],
+            "tags": ["artificial", "dark", "passage", "underground", "utility"]
+        },
+        {
+            "noun": "Pit",
+            "size": ["small", "medium", "large"],
+            "tags": ["artificial", "dangerous", "fall", "monster"]
+        },
+        {
+            "noun": "Sanctum",
+            "size": ["small", "medium", "large"],
+            "tags": ["artificial", "hidden", "religious", "secure"]
+        },
+        {
+            "noun": "Shrine",
+            "size": ["small", "medium", "large"],
+            "tags": ["artificial", "hidden", "religious", "utility"]
+        },
+        {
+            "noun": "Tunnel",
+            "size": ["small", "medium"],
+            "tags": ["artificial", "dark", "natural","passage", "underground", "utility"]
+        },
+        {
+            "noun": "Vault",
+            "size": ["small", "medium", "large"],
+            "tags": ["artificial", "secure", "storage", "treasure", "underground", "utility"]
+        }
+
+    ],
+    "adjectives": [
+        {
+            "adjective": "Crumbling",
+            "tags": ["dangerous", "fall", "ruined"]
+        },
+        {
+            "adjective": "Slimy",
+            "tags": ["moisture", "monster", "natural"]
+        },
+        {
+            "adjective": "Damp",
+            "tags": ["moisture", "natural"]
+        },
+        {
+            "adjective": "Moldy",
+            "tags": ["moisture", "natural"]
+        },
+        {
+            "adjective": "Rusted",
+            "tags": ["artificial", "ruined"]
+        },
+        {
+            "adjective": "Fungal",
+            "tags": ["moisture", "natural"]
+        },
+        {
+            "adjective": "Dripping",
+            "tags": ["moisture", "natural"]
+        },
+        {
+            "adjective": "Echoing",
+            "tags": ["natural"]
+        },
+        {
+            "adjective": "Moldering",
+            "tags": ["artificial", "ruined"]
+        },
+        {
+            "adjective": "Bone-strewn",
+            "tags": ["dangerous", "death", "natural"]
+        },
+        {
+            "adjective": "Shadowy",
+            "tags": ["dark", "natural"]
+        },
+        {
+            "adjective": "Slick",
+            "tags": ["moisture", "natural"]
+        },
+        {
+            "adjective": "Candlelit",
+            "tags": ["artificial", "light"]
+        },
+        {
+            "adjective": "Tangled",
+            "tags": ["natural"]
+        },
+        {
+            "adjective": "Ashen",
+            "tags": ["ruined"]
+        },
+        {
+            "adjective": "Broken",
+            "tags": ["artificial", "ruined"]
+        },
+        {
+            "adjective": "Cobwebbed",
+            "tags": ["animal", "natural"]
+        },
+        {
+            "adjective": "Flickering",
+            "tags": ["artificial", "light"]
+        },
+        {
+            "adjective": "Stagnant",
+            "tags": ["moisture", "natural"]
+        },
+        {
+            "adjective": "Whispering",
+            "tags": ["natural"]
+        }
+    ]
+}

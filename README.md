@@ -35,6 +35,7 @@ This stage focuses on establishing the core data architecture, component structu
 - [ ] **Editing:** Add the ability to edit the text and value of room attributes, as well as moving, adding or deleting rooms
 - [ ] **Persistence:** Implement local storage or file export to save generated dungeons
 - [ ] **Manual Creation Tools:** Ability to create dungeons and rooms manually from scratch, by starting with one empty room and manually adding connections
+- [ ] **Rule Integration:** Implement Trespasser rules regarding skill checks, loot generation, threat rating and hostility tiers into generation of rooms and features
 
 ### Further Ideas (Undecided Features)
 - **Verticality** - Dungeons can have multiple floors or layers, with connections between nodes on different layers
@@ -58,10 +59,53 @@ The application uses a hierarchical JSON structure to define rooms.
 - `RoomFeature`: A sub-component responsible for formatting individual list items (A. Type: Name: Details).
 
 ### Generator Logic
-The `generateRandomRoom` function operates in three main steps:
-1.  **Main Attribute Selection:** Randomly picks a name, description and randomly determines `isDark` value
-2.  **Feature Selection:** Selects as set number of features from the feature pool at random without duplicates.
-3.  **Sorting:** Sorts the selected features by priority (Encounter, Trap, Feature) and hidden value before rendering.
+
+The `generateRandomRoom` function constructs a Room object by:
+1. **Generate Name:** Calls `generateRoomName`
+    - Selects and capitalises a random noun and adjective from `roomNames.json`
+    - Returns name as 'adjective + noun' (90% chance) or just noun (10% chance)
+2. **Select Other Attributes:** Selects other attributes from pools
+    - Selects a random description from the `roomDescriptions.json`
+    - Randomly determines `isDark` (50/50 T/F)
+    - Selects set number of features from `roomFeatures.json` without duplicates
+        - Uses an array available indexes
+        - Removes index from available after that feature is added to selection
+3. **Sort by Priority:** Sorts the features by custom format priority
+    - Encounter > Trap > Feaures > Signs
+    - Sorts by type first, then hidden if they are of the same type
+4. **Return RoomData:** Returns RoomData containing selected/generated attributes
+
+### Data Pools
+
+#### Room Names
+File `roomNames.json` stores room name generation data as two arrays `nouns` and `adjectives`
+
+`nouns` stores noun objects with attributes:
+- **noun** - a noun denoting the type or form of the room e.g. Antechamber
+- **size** - an array of logical room sizes denoted by the noun (small, medium and/or large)
+    - intended to later use in conjunction with a size attribute of the room object which will determine the size
+    - determined size will narrow possible room types (nouns available)
+- **tags** - an array of single word descriptors of the possible form or function of the room
+    - *access:* room provides access to something important or dungeon itself
+    - *adjoined:* room is connected to another primary room
+    - *animal:* room is associated with or likely contains an animal or animals
+    - *artificial:* man-made or formed by unnatural means
+    - *burial:* room is associated with the burial of the dead
+    - *dangerous:* room is harzardous to Trespassers by its form or function
+    - *dark:* room is likely dark unless purposefully lit
+    - *dwelling:* room serves as a living space for humans, animals or monsters
+    - *fall:* form of room or major room feature poses the risk of falling
+    - *hidden:* room is likely to be or can easily be hidden
+    - *monster:* room is associated with or likely contains an animal or animals
+    - *natural:* formed by natural means
+    - *passage:* room serves as a passageway between rooms
+    - *religious:* religious or spiritual connotations or function of room
+    - *secure:* room serves to protect something
+    - *storage:* room serves as a store, container or stockpile
+    - *treasure:* likely contains treasure or something important
+    - *underground:* room is underground
+    - *utility:* room serves or once served a logistical purpose in the dungeon
+
 
 ## Running the Project
 Requires **[Node.js](https://nodejs.org/en/download/)** (Version 18.x or higher) and **[npm](https://docs.npmjs.com/)**
