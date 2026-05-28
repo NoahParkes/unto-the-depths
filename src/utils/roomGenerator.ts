@@ -56,16 +56,21 @@ export function generateRandomRoom(roomId: number): RoomData {
   // Sort the features based on:
   // Priority: Encounter (0) -> Trap (1) -> Feature (2) -> Sign (3)
   const sortedFeatures = [...selectedFeatures].sort((a, b) => {
-    const getPriority = (type: string) => {
-      if (type === 'encounter') return 0;
-      if (type === 'trap') return 1;
-      if (type === 'feature') return 2;
-      if (type === 'sign') return 3;
-      return 4;
+    const getPriority = (category: string) => {
+      if (category === 'encounter') return 0;
+      if (category === 'trap') {
+        if(a.subcategory === 'room'){
+          return 1; // Room traps have higher priority than feature traps
+        }
+          return 2;
+      }
+      if (category === 'feature') return 3;
+      if (category === 'sign') return 4;
+      return 5;
     };
 
-    const aPriority = getPriority(a.type);
-    const bPriority = getPriority(b.type);
+    const aPriority = getPriority(a.category);
+    const bPriority = getPriority(b.category);
 
     if (aPriority !== bPriority) {
       return aPriority - bPriority;
