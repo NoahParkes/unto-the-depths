@@ -8,6 +8,11 @@ import type { RoomData } from './types/RoomData';
 function App() {
   const [room, setRoom] = useState(() => generateRandomRoom(1));
   const nextIdRef = useRef<number>(2);
+  
+  // Handler to update the room when editing is saved
+  const handleRoomUpdate = (updatedRoom: RoomData) => {
+    setRoom(updatedRoom);
+  };
 
   // Button to regenerate without reloading
   const handleRegenerate = () => {
@@ -76,9 +81,12 @@ function App() {
         <button onClick={() => document.getElementById('import-file')?.click()}>
           Import Room
         </button>
-
       </div>
-      <RoomCard room={room} />
+
+      <RoomCard 
+        room={room} 
+        onUpdate={handleRoomUpdate} 
+      />
     </div>
   );
 }

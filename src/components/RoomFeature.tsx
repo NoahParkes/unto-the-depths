@@ -1,4 +1,4 @@
-import type { Feature} from '../types/RoomData';
+import type { Feature } from '../types/RoomData';
 
 interface RoomFeatureProps {
   feature: Feature;
@@ -13,11 +13,11 @@ export function RoomFeature({ feature, index }: RoomFeatureProps) {
   // Returns the label string if applicable, or empty string for standard features
   let typeLabel = "";
   
-  if (feature.type === 'trap') {
-    typeLabel = feature.subtype === 'room' ? "Room Trap" : "Detail Trap";
-  } else if (feature.type === 'encounter') {
+  if (feature.category === 'trap') {
+    typeLabel = feature.subcategory === 'room' ? "Room Trap" : "Detail Trap";
+  } else if (feature.category === 'encounter') {
     typeLabel = "Encounter";
-  } else if (feature.type === 'sign') {
+  } else if (feature.category === 'sign') {
     typeLabel = "Sign";
   }
 
@@ -29,7 +29,7 @@ export function RoomFeature({ feature, index }: RoomFeatureProps) {
   const namePart = <span className="feature-name">{feature.name}.</span>;
 
   // Part 3: Hidden Value (Only for traps, if > 0)
-  const hiddenPart = (feature.type === 'trap' && feature.hidden > 0) ? (
+  const hiddenPart = (feature.category === 'trap' && feature.hidden > 0) ? (
     <span className="feature-hidden"> Hidden {feature.hidden}.</span>
   ) : null;
 

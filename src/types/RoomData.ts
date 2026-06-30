@@ -1,10 +1,10 @@
-export type FeatureType = 'encounter' | 'trap' | 'feature' | 'sign';
-export type FeatureSubType = 'combat' | 'npc' | 'room' | 'detail' | 'feature' | 'trap' | 'sign' | string;
+export type FeatureCategory = 'encounter' | 'trap' | 'feature' | 'sign';
+export type FeatureSubCategory = 'combat' | 'npc' | 'room' | 'detail' | 'feature' | 'sign' | string;
 
 export interface Feature {
   id: string;
-  type: FeatureType;
-  subtype: FeatureSubType;
+  category: FeatureCategory;
+  subcategory: FeatureSubCategory;
   name: string;
   hidden: number; // 0 = visible, higher value means more hidden, Trespasser Rulebook pg.59
   details: string; // Description, later build into description with additional details like loot, checks, etc.
