@@ -25,10 +25,10 @@ interface Effect  { type: 'effect';  description: string }
 // A note is a general note about a feature.
 // It can also be used to make plain text versions of other sub-details, 
 // such as triggers or disarms for flexibility in the editor
-interface Note    { type: 'note';    name?: string; description: string }
+interface Note  { type: 'note';  id: string; name?: string; description: string }
 
 // A check is an additional test that can be added to a feature
-interface Check   { type: 'check';   test: Test; description?: string }
+interface Check { type: 'check'; id: string; test: Test; description?: string }
 
 type GenericSubDetail = Note | Check; // addable to any feature
 
@@ -39,28 +39,29 @@ interface FeatureBase {
   subDetails: GenericSubDetail[];
 }
 
+// shared trio for room traps and trapped details
+interface TrapDetails {
+  disarm?: Disarm;
+  trigger?: Trigger;
+  effect?: Effect;
+}
+
 interface EncounterFeature extends FeatureBase {
   type: 'encounter';
   tokens: { count: number; name: string }[]; // tokens are creatures/npcs
   description: string;
 }
 
-interface RoomTrapFeature extends FeatureBase {
+interface RoomTrapFeature extends FeatureBase, TrapDetails {
   type: 'roomTrap'; 
   hidden: number; // How many successes in a group explore check are required to detect the trap (1-5)
   description: string;
-  disarm?: Disarm;
-  trigger?: Trigger; // optional at type level, required for valid form submission
-  effect?: Effect;
 }
 
-interface DetailFeature extends FeatureBase {
+interface DetailFeature extends FeatureBase, TrapDetails {
   type: 'detail';
   description: string;
-  trapped: boolean; // toggles whether the detail is a detail trap
-  disarm?: Disarm;  // }
-  trigger?: Trigger;// } - become available in form when trapped is true
-  effect?: Effect;  // }
+  trapped: boolean; // toggles whether the detail is a detail trap, also enables trap fields
 }
 
 export type Feature = EncounterFeature | RoomTrapFeature | DetailFeature;
