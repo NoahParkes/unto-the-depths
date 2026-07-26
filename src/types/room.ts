@@ -63,9 +63,9 @@ interface DetailFeature extends FeatureBase {
   effect?: Effect;  // }
 }
 
-type Feature = EncounterFeature | RoomTrapFeature | DetailFeature;
+export type Feature = EncounterFeature | RoomTrapFeature | DetailFeature;
 
-interface Room {
+ export interface Room {
   roomId: number;
   title: string;
   description: string;
