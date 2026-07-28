@@ -15,105 +15,14 @@ body, html {
   overflow: auto;
 }
 
-.room-card {
-  width: 25vw;
-  max-width: 640px;
-  min-width: 400px;
-  max-height: 180vh;
-  background-color: #ededed;
-  border: 3px solid #1e1e1e;
-  padding: 24px;
-  text-align: left;
-  color: #1e1e1e;
-  font-size: 0.95rem;
-  line-height: 1.5;
-  overflow-y: auto;
-  box-sizing: border-box;
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
 }
 
-.room-title {
-  width: 100%;
-  border: none;
-  background: transparent;
-  resize: none;
-  padding: 0;
-  margin: 0;
-  outline: none;
-  font-family: inherit;
-  font-weight: bold;
-
-  font-size: 1.25rem;
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-  padding-bottom: 8px;
-  line-height: 1.3;
-  color: #1e1e1e;
-
-  cursor: text;
+.app-toolbar {
+  display: flex;
+  gap: 8px;
 }
-
-.room-description {
-  width: 100%;
-  border: none;
-  background: transparent;
-  resize: none;
-  padding: 0;
-  margin: 0;
-  outline: none;
-  font-family: inherit;
-
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  color: #1e1e1e;
-  line-height: 1.5;
-}
-
-.room-description:focus {
-  background-color: rgba(0,0,0,0.05);
-}
-
-.features-list {
-  padding: 0;
-  margin: 0;
-}
-
-/* 
-   Grid layout for hanging index
-   Column 1: The marker (fixed width)
-   Column 2: The content (takes remaining space)
-*/
-.feature-item {
-  display: grid;
-  grid-template-columns: auto 1fr; /* Marker width | Content width */
-  margin-bottom: 0.6rem;
-  align-items: baseline;
-}
-
-/* The marker (A., B., etc.) */
-.feature-marker {
-  font-weight: 700;
-  color: #1e1e1e;
-  margin-right: 0.4rem;
-  min-width: 1.5rem; 
-  text-align: right;
-}
-
-/* The content wrapper */
-.feature-content {
-  display: inline;
-}
-
-/* Bold elements: type, name, hidden */
-.feature-type,
-.feature-name,
-.feature-hidden {
-  font-weight: 700;
-  color: #1e1e1e;
-}
-
-/* Normal text: details */
-.feature-details {
-  font-weight: 400;
-  color: #1e1e1e;
-}
-
