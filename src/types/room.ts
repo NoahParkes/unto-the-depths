@@ -1,11 +1,11 @@
 // Pool for attribute names - Trespasser rulebook p.11
-type AttributeName = 'Might' | 'Agility' | 'Intellect' | 'Spirit';
+export type AttributeName = 'Might' | 'Agility' | 'Intellect' | 'Spirit';
 
 // Pool for skill names - Trespasser rulebook p.17
-type Skill = 'Acrobatics' | 'Alchemy' | 'Athletics' | 'Crafting' | 'Folklore' | 'Letters' | 'Magic' | 'Nature' | 'Perception' | 'Speech' | 'Stealth' | 'Tinkering';
+export type Skill = 'Acrobatics' | 'Alchemy' | 'Athletics' | 'Crafting' | 'Folklore' | 'Letters' | 'Magic' | 'Nature' | 'Perception' | 'Speech' | 'Stealth' | 'Tinkering';
 
 // A test is a combination of an attribute, a skill, and a difficulty level (usually 10-20)
-interface Test {
+export interface Test {
   attributeName: AttributeName;
   skill: Skill;
   difficulty: number;
@@ -13,14 +13,14 @@ interface Test {
 
 // A trigger is the group test that must be passed to avoid the trap effects if the explore check fails to detect it
 // an optional description can be provided to clarify the trigger conditions
-interface Trigger { type: 'trigger'; test: Test; description?: string }
+export interface Trigger { type: 'trigger'; test: Test; description?: string }
 
 // A disarm is a special test added to a trap to augment the standard disarm action,
 // or to add descriptive flavor to the trap
-interface Disarm  { type: 'disarm';  test?: Test; description?: string }
+export interface Disarm  { type: 'disarm';  test?: Test; description?: string }
 
 // An effect outlines the consequences of a trap being triggered
-interface Effect  { type: 'effect';  description: string }
+export interface Effect  { type: 'effect';  description: string }
 
 // A note is a general note about a feature.
 // It can also be used to make plain text versions of other sub-details, 
@@ -40,7 +40,7 @@ interface FeatureBase {
 }
 
 // shared trio for room traps and trapped details
-interface TrapDetails {
+export interface TrapDetails {
   disarm?: Disarm;
   trigger?: Trigger;
   effect?: Effect;
