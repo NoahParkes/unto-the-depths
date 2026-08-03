@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import type { Room } from '../types/room';
-import { loadRoom, saveRoom } from '../services/storage';
+import { loadRoom, saveRoom, deleteStoredRoom } from '../services/storage';
 
 const AUTOSAVE_DELAY_MS = 500;
 
@@ -34,5 +34,10 @@ export function usePersistedRoom(roomId: number) {
     saveRoom(room);
   }, [room]);
 
-  return { room, setRoom, saveNow };
+  const clearStorage = useCallback(() => {
+    deleteStoredRoom(roomId);
+    setRoom(createBlankRoom(roomId));
+  }, [roomId]);
+
+  return { room, setRoom, saveNow, clearStorage };
 }
