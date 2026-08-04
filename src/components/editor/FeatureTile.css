@@ -1,0 +1,53 @@
+.editor-feature-tile {
+  border: 1px solid #1e1e1e;
+  padding: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #1e1e1e;
+}
+
+.feature-tile-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.feature-index {
+  font-weight: 700;
+  color: #1e1e1e;
+  flex-shrink: 0;
+}
+
+.feature-name-field {
+  flex: 1;
+  min-width: 0;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 4px;
+  box-sizing: border-box;
+  color: #1e1e1e;
+}
+
+.feature-delete {
+  flex-shrink: 0;
+  background-color: #b02a2a;
+  color: #fff;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.feature-display-name-preview {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #555;
+  margin: 2px 0 6px;
+}
+
+.feature-tile-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
