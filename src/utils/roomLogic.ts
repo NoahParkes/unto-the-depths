@@ -1,5 +1,5 @@
 // utils/roomLogic.ts
-import type { Room } from '../types/room';
+import type { Room, Test } from '../types/room';
 import { featureRegistry } from '../config/featureRegistry';
 
 // Fixed display order for room tags, independent of feature insertion order
@@ -26,4 +26,9 @@ export function getCompositeTitle(room: Room): string {
   const tags = getRoomTags(room);
   if (tags.length === 0) return room.title;
   return `${room.title} (${tags.join(',')})`;
+}
+
+// Plain-text rendering of a test
+export function formatTest(test: Test): string {
+  return `${test.attributeName}|${test.skill} vs ${test.difficulty}`;
 }
