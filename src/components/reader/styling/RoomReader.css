@@ -7,7 +7,7 @@
   background-color: #ededed;
   box-sizing: border-box;
   color: #1e1e1e;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   line-height: 1.5;
   text-align: left;
 }
@@ -20,7 +20,7 @@
 }
 
 .reader-description {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 0 0 1rem;
   color: #1e1e1e;
 }
