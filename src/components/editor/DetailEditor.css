@@ -1,0 +1,14 @@
+.detail-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #1e1e1e;
+}
+
+.detail-trapped-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: #1e1e1e;
+}
