@@ -56,7 +56,7 @@ export const featureRegistry: FeatureRegistry = {
       description: '',
       subDetails: [],
     }),
-    getDisplayName: (f) => `Room Trap: ${f.detailName}.`,
+    getDisplayName: (f) => `Room Trap: ${f.detailName}. Hidden: ${f.hidden}.`,
     isComplete: (f) =>
       f.detailName.trim() !== '' &&
       f.hidden >= 1 && f.hidden <= 5 &&

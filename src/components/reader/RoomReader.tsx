@@ -1,28 +1,25 @@
 import { useRoom } from '../../state/RoomContext';
 import { getCompositeTitle } from '../../utils/roomLogic';
-import { sortFeaturesForDisplay, getFeatureDisplayName } from '../../config/featureRegistry';
+import { sortFeaturesForDisplay } from '../../config/featureRegistry';
+import { FeatureEntry } from './FeatureEntry';
 import './styling/RoomReader.css';
 
 export function RoomReader() {
-  const { room } = useRoom();
+    const { room } = useRoom();
 
-  const orderedFeatures = sortFeaturesForDisplay(room.features);
+    const orderedFeatures = sortFeaturesForDisplay(room.features);
 
-  return (
-    <div className="room-reader">
-      <div className="reader-title">{getCompositeTitle(room)}</div>
+    return (
+        <div className="room-reader">
+            <div className="reader-title">{getCompositeTitle(room)}</div>
 
-      <p className="reader-description">{room.description}</p>
+            <p className="reader-description">{room.description}</p>
 
-      <div className="reader-features">
-        {orderedFeatures.map((feature, index) => (
-          <div className="reader-feature-entry" key={feature.id}>
-            <span className="reader-feature-marker">{String.fromCharCode(65 + index)}.</span>
-            {/* add body content*/}
-            <span className="reader-feature-content">{getFeatureDisplayName(feature)}</span>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
+            <div className="reader-features">
+                {orderedFeatures.map((feature, index) => (
+                    <FeatureEntry key={feature.id} feature={feature} index={index} />
+                ))}
+            </div>
+        </div>
+    );
 }

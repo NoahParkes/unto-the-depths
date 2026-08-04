@@ -1,0 +1,11 @@
+.room-trap-reader {
+  color: #1e1e1e;
+}
+
+.room-trap-reader .trap-line {
+  margin: 0 0 0.3rem;
+}
+
+.room-trap-reader .trap-line-label {
+  font-weight: 700;
+}

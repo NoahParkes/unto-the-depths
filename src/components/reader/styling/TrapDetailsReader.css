@@ -1,0 +1,12 @@
+.trap-details-reader {
+  margin-top: 0.3rem;
+}
+
+.trap-line {
+  margin: 0 0 0.3rem;
+  color: #1e1e1e;
+}
+
+.trap-line-label {
+  font-weight: 700;
+}

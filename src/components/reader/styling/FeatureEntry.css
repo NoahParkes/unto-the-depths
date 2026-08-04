@@ -1,0 +1,23 @@
+.reader-feature-entry {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.reader-feature-marker {
+  font-weight: 700;
+  text-align: right;
+  min-width: 1.5rem;
+  color: #1e1e1e;
+}
+
+.reader-feature-content {
+  display: flex;
+  flex-direction: column;
+  color: #1e1e1e;
+}
+
+.reader-feature-display-name {
+  font-weight: 700;
+}
