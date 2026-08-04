@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import type { Feature } from '../../types/room';
 import { useRoom } from '../../state/RoomContext';
-import { getAddableFeatureTypes, getFeatureDisplayName } from '../../config/featureRegistry';
+import { getAddableFeatureTypes } from '../../config/featureRegistry';
 import { getCompositeTitle } from '../../utils/roomLogic';
+import { FeatureTile } from './FeatureTile';
 import './RoomEditor.css';
 
 export function RoomEditor() {
-  const { room, updateTitle, updateDescription, toggleDark, addFeature, removeFeature } = useRoom();
+  const { room, updateTitle, updateDescription, toggleDark, addFeature } = useRoom();
   const [showAddMenu, setShowAddMenu] = useState(false);
 
   const addableTypes = getAddableFeatureTypes(room.features);
@@ -43,14 +44,7 @@ export function RoomEditor() {
 
       <div className="editor-features">
         {room.features.map((feature, index) => (
-          <div className="editor-feature-tile" key={feature.id}>
-            <span className="feature-index">{String.fromCharCode(65 + index)}.</span>
-            {/* placeholders */}
-            <span className="feature-display-name">{getFeatureDisplayName(feature)}</span>
-            <button className="feature-delete" onClick={() => removeFeature(feature.id)}>
-              Delete
-            </button>
-          </div>
+          <FeatureTile key={feature.id} feature={feature} index={index} />
         ))}
 
         <div className="editor-add-feature">
@@ -59,9 +53,7 @@ export function RoomEditor() {
             <ul className="add-feature-menu">
               {addableTypes.map(({ type, label, disabled }) => (
                 <li key={type}>
-                  <button disabled={disabled} onClick={() => handleAddFeature(type)}>
-                    {label}
-                  </button>
+                  <button disabled={disabled} onClick={() => handleAddFeature(type)}>{label}</button>
                 </li>
               ))}
             </ul>
