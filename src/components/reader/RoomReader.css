@@ -1,0 +1,49 @@
+.room-reader {
+  width: 25vw;
+  max-width: 640px;
+  min-width: 400px;
+  border: 3px solid #1e1e1e;
+  padding: 24px;
+  background-color: #ededed;
+  box-sizing: border-box;
+  color: #1e1e1e;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.reader-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.reader-description {
+  font-size: 0.9rem;
+  margin: 0 0 1rem;
+  color: #1e1e1e;
+}
+
+.reader-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.reader-feature-entry {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: baseline;
+  gap: 0.4rem;
+}
+
+.reader-feature-marker {
+  font-weight: 700;
+  text-align: right;
+  min-width: 1.5rem;
+}
+
+.reader-feature-content {
+  font-weight: 600;
+}
