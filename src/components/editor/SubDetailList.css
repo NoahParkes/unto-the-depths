@@ -1,0 +1,72 @@
+.sub-detail-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+  padding-left: 1rem;
+  color: #1e1e1e;
+}
+
+.sub-detail-tile {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  border: 1px dashed #1e1e1e;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.sub-detail-delete {
+  flex-shrink: 0;
+  background-color: #b02a2a;
+  color: #fff;
+  border: none;
+  padding: 2px 6px;
+  cursor: pointer;
+}
+
+.sub-detail-add { position: relative; }
+
+.sub-detail-add-menu {
+  position: absolute;
+  list-style: none;
+  margin: 4px 0 0;
+  padding: 0;
+  border: 1px solid #1e1e1e;
+  background-color: #ededed;
+  z-index: 1;
+  color: #1e1e1e;
+}
+
+.sub-detail-add-menu li button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 6px 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #1e1e1e;
+}
+
+.note-editor, .check-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.note-name-field, .note-description-field {
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 4px;
+  box-sizing: border-box;
+  color: #1e1e1e;
+  background-color: #fff;
+}
+
+.note-description-field {
+  min-height: 2.5rem;
+  resize: vertical;
+}
