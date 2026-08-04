@@ -5,7 +5,7 @@ import { EncounterEditor } from './EncounterEditor';
 import { RoomTrapEditor } from './RoomTrapEditor';
 import { DetailEditor } from './DetailEditor';
 import { SubDetailList } from './SubDetailList';
-import './FeatureTile.css';
+import './styling/FeatureTile.css';
 
 interface FeatureTileProps {
   feature: Feature;

@@ -1,6 +1,6 @@
 import type { TrapDetails, Test } from '../../types/room';
 import { TestFields } from './TestFields';
-import './TrapDetailsFields.css';
+import './styling/TrapDetailsFields.css';
 
 interface TrapDetailsFieldsProps {
   trap: TrapDetails;

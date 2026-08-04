@@ -1,5 +1,5 @@
 import type { Feature } from '../../types/room';
-import './EncounterEditor.css';
+import './styling/EncounterEditor.css';
 
 type EncounterFeature = Extract<Feature, { type: 'encounter' }>;
 

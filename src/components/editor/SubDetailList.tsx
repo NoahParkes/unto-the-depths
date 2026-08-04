@@ -3,7 +3,7 @@ import type { Feature } from '../../types/room';
 import { getAddableSubDetailTypes, createBlankSubDetail } from '../../config/subDetailRegistry';
 import { NoteEditor } from './NoteEditor';
 import { CheckEditor } from './CheckEditor';
-import './SubDetailList.css';
+import './styling/SubDetailList.css';
 
 type SubDetail = Feature['subDetails'][number];
 

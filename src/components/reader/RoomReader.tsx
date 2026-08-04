@@ -1,7 +1,7 @@
 import { useRoom } from '../../state/RoomContext';
 import { getCompositeTitle } from '../../utils/roomLogic';
 import { sortFeaturesForDisplay, getFeatureDisplayName } from '../../config/featureRegistry';
-import './RoomReader.css';
+import './styling/RoomReader.css';
 
 export function RoomReader() {
   const { room } = useRoom();

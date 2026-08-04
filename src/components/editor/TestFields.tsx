@@ -1,5 +1,5 @@
 import type { Test, AttributeName, Skill } from '../../types/room';
-import './TestFields.css';
+import './styling/TestFields.css';
 
 const ATTRIBUTE_NAMES: AttributeName[] = ['Might', 'Agility', 'Intellect', 'Spirit'];
 const SKILLS: Skill[] = [

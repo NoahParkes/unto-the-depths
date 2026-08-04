@@ -1,6 +1,6 @@
 import type { Feature } from '../../types/room';
 import { TrapDetailsFields } from './TrapDetailsFields';
-import './DetailEditor.css';
+import './styling/DetailEditor.css';
 
 type DetailFeature = Extract<Feature, { type: 'detail' }>;
 

@@ -4,7 +4,7 @@ import { useRoom } from '../../state/RoomContext';
 import { getAddableFeatureTypes } from '../../config/featureRegistry';
 import { getCompositeTitle } from '../../utils/roomLogic';
 import { FeatureTile } from './FeatureTile';
-import './RoomEditor.css';
+import './styling/RoomEditor.css';
 
 export function RoomEditor() {
   const { room, updateTitle, updateDescription, toggleDark, addFeature } = useRoom();
