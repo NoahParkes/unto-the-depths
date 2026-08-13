@@ -1,0 +1,42 @@
+.encounter-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #1e1e1e;
+}
+
+.encounter-tokens {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.encounter-token-row {
+  display: flex;
+  gap: 6px;
+}
+
+.token-count-field {
+  width: 3.5rem;
+  flex-shrink: 0;
+  color: #1e1e1e;
+  background-color: #fff;
+  font-family: inherit;
+}
+
+.token-name-field {
+  flex: 1;
+  min-width: 0;
+  color: #1e1e1e;
+  background-color: #fff;
+  font-family: inherit;
+}
+
+.token-delete {
+  flex-shrink: 0;
+  background-color: #b02a2a;
+  color: #fff;
+  border: none;
+  padding: 2px 8px;
+  cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.room-trap-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #1e1e1e;
+}
+
+.trap-hidden-field {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1e1e1e;
+}
+
+.trap-hidden-field input {
+  width: 3rem;
+  color: #1e1e1e;
+  background-color: #fff;
+  font-family: inherit;
+}

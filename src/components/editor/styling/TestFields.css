@@ -1,0 +1,21 @@
+.test-fields {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #1e1e1e;
+}
+
+.test-vs-label {
+  font-weight: 700;
+}
+
+.test-fields select,
+.test-fields input[type="number"] {
+  font-family: inherit;
+  color: #1e1e1e;
+  background-color: #fff;
+}
+
+.test-fields input[type="number"] {
+  width: 3.5rem;
+}
